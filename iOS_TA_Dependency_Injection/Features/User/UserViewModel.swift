@@ -10,7 +10,12 @@ import Foundation
 class UserViewModel: ObservableObject {
     @Published var user: User?
     
-    private let repository = Repository()
+    private let repository : RepositoryProtocol
+    
+    
+    init(repository:RepositoryProtocol){
+        self.repository = repository
+    }
     
     /// Holt die Benutzer-Informationen aus dem Repository
     func fetchUser() {

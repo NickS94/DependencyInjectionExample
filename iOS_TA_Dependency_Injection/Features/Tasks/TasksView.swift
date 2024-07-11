@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TasksView: View {
+    
+    @ObservedObject var tasksViewModel : TasksViewModel
+    
     var body: some View {
-        List(MockData.tasks) { task in
+        List(tasksViewModel.tasks) { task in
             HStack {
                 Image(systemName: task.completed ? "checkmark.square" : "square")
                 Text(task.title)
@@ -20,5 +23,5 @@ struct TasksView: View {
 }
 
 #Preview {
-    TasksView()
+    TasksView(tasksViewModel: TasksViewModel(repository: MockRepository()))
 }

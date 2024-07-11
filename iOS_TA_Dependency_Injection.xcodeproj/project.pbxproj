@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030870AC2C40432900715ED1 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030870AB2C40432900715ED1 /* MockRepository.swift */; };
 		46BA218A2B90C8DF00EA6CF3 /* iOS_TA_Dependency_InjectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA21892B90C8DF00EA6CF3 /* iOS_TA_Dependency_InjectionApp.swift */; };
 		46BA218C2B90C8DF00EA6CF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA218B2B90C8DF00EA6CF3 /* ContentView.swift */; };
 		46BA218E2B90C8E000EA6CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BA218D2B90C8E000EA6CF3 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030870AB2C40432900715ED1 /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
 		46BA21862B90C8DF00EA6CF3 /* iOS_TA_Dependency_Injection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_TA_Dependency_Injection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BA21892B90C8DF00EA6CF3 /* iOS_TA_Dependency_InjectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_TA_Dependency_InjectionApp.swift; sourceTree = "<group>"; };
 		46BA218B2B90C8DF00EA6CF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				46BA219F2B90CAC500EA6CF3 /* User.swift */,
 				46BA21A12B90CB9300EA6CF3 /* Repository.swift */,
 				46BA21A32B90CC0900EA6CF3 /* MockData.swift */,
+				030870AB2C40432900715ED1 /* MockRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				46BA21A02B90CAC500EA6CF3 /* User.swift in Sources */,
 				46BA218A2B90C8DF00EA6CF3 /* iOS_TA_Dependency_InjectionApp.swift in Sources */,
 				46BA21A42B90CC0900EA6CF3 /* MockData.swift in Sources */,
+				030870AC2C40432900715ED1 /* MockRepository.swift in Sources */,
 				46BA21AA2B90E82400EA6CF3 /* UserView.swift in Sources */,
 				46BA21A22B90CB9300EA6CF3 /* Repository.swift in Sources */,
 			);

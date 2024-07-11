@@ -9,13 +9,24 @@ import SwiftUI
 
 struct UserView: View {
     
+    
+    @ObservedObject var userViewModel : UserViewModel
+
     var body: some View {
+        
         Form {
-            formLabel(title: "Name", text: MockData.user.name)
-            formLabel(title: "Username", text: MockData.user.username)
-            formLabel(title: "Phone", text: MockData.user.phone)
-            formLabel(title: "Mail", text: MockData.user.email)
-            formLabel(title: "Web", text: MockData.user.website)
+            Section ("Data"){
+                if let user = userViewModel.user{
+                    formLabel(title: "Name", text: user.name)
+                    formLabel(title: "Username", text:user.username )
+                    formLabel(title: "Phone", text: user.phone )
+                    formLabel(title: "Mail", text: user.email)
+                    formLabel(title: "Web", text: user.website)
+                    
+                }else{
+                    Text("Data is loading")
+                }
+            }
         }
     }
     
@@ -29,5 +40,5 @@ struct UserView: View {
 }
 
 #Preview {
-    UserView()
+    UserView(userViewModel: UserViewModel(repository: MockRepository()))
 }

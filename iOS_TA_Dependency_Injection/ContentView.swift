@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @StateObject var userViewModel = UserViewModel(repository: Repository.sharedInstance)
+    @StateObject var tasksViewModel = TasksViewModel(repository: Repository.sharedInstance)
+    
     var body: some View {
         TabView {
-            TasksView()
+            TasksView(tasksViewModel: tasksViewModel)
                 .tabItem {
                     Label("Tasks", systemImage: "checkmark.square.fill")
                 }
             
-            Text("User")
+            UserView(userViewModel: userViewModel)
                 .tabItem {
                     Label("User", systemImage: "person.fill")
                 }

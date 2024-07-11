@@ -10,7 +10,12 @@ import Foundation
 class TasksViewModel: ObservableObject {
     @Published var tasks: [ToDo] = []
     
-    private let repository = Repository()
+    private let repository :RepositoryProtocol
+    
+    
+    init(repository:RepositoryProtocol){
+        self.repository = repository
+    }
     
     /// Holt die ToDo-Aufgaben vom Repository
     @MainActor

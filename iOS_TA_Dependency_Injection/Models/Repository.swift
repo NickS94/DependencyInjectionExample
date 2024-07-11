@@ -7,8 +7,21 @@
 
 import Foundation
 
-class Repository {
+protocol RepositoryProtocol{
+    func getTasks() async -> [ToDo]
+    
+    func getUser() async -> User?
+}
 
+
+
+
+class Repository:RepositoryProtocol {
+
+    
+    static let sharedInstance = Repository()
+    
+    
     /// Holt die ToDo-Aufgaben aus der API
     func getTasks() async -> [ToDo] {
         let response = try? await URLSession.shared.data(from: URL(string: "https://jsonplaceholder.typicode.com/todos")!)
