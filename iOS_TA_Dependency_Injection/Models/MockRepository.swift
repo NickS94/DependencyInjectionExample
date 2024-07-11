@@ -10,7 +10,6 @@ import Foundation
 
 class MockRepository : RepositoryProtocol{
     
-    
     func getTasks() async -> [ToDo] {
         MockData.tasks
     }

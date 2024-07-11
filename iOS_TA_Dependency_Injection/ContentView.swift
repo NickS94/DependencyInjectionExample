@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
     @StateObject var userViewModel = UserViewModel(repository: Repository.sharedInstance)
     @StateObject var tasksViewModel = TasksViewModel(repository: Repository.sharedInstance)
     

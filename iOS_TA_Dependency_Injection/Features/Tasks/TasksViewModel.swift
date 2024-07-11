@@ -8,6 +8,7 @@
 import Foundation
 
 class TasksViewModel: ObservableObject {
+    
     @Published var tasks: [ToDo] = []
     
     private let repository :RepositoryProtocol

@@ -18,8 +18,8 @@ struct UserView: View {
             Section ("Data"){
                 if let user = userViewModel.user{
                     formLabel(title: "Name", text: user.name)
-                    formLabel(title: "Username", text:user.username )
-                    formLabel(title: "Phone", text: user.phone )
+                    formLabel(title: "Username", text:user.username)
+                    formLabel(title: "Phone", text: user.phone)
                     formLabel(title: "Mail", text: user.email)
                     formLabel(title: "Web", text: user.website)
                     
@@ -27,6 +27,9 @@ struct UserView: View {
                     Text("Data is loading")
                 }
             }
+        }
+        .onAppear{
+            userViewModel.fetchUser()
         }
     }
     

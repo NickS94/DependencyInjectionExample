@@ -8,6 +8,7 @@
 import Foundation
 
 class UserViewModel: ObservableObject {
+    
     @Published var user: User?
     
     private let repository : RepositoryProtocol

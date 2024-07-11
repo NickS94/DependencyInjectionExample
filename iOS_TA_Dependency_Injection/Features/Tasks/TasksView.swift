@@ -19,9 +19,13 @@ struct TasksView: View {
                     .lineLimit(1)
             }
         }
+        .onAppear(perform: {
+            tasksViewModel.fetchTasks()
+        })
     }
 }
 
 #Preview {
     TasksView(tasksViewModel: TasksViewModel(repository: MockRepository()))
 }
+

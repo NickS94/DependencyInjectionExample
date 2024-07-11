@@ -15,10 +15,9 @@ protocol RepositoryProtocol{
 
 
 
-
 class Repository:RepositoryProtocol {
 
-    
+
     static let sharedInstance = Repository()
     
     
